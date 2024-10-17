@@ -1,8 +1,8 @@
-import {type Middleware, type MiddlewareFn, Pipeline} from "../util/pipeline.ts";
-import type {CometRequest} from "../request.ts";
-import type {CometResult} from "../result.ts";
-import type {CometState} from "../state.ts";
-import {API_NOT_FOUND, type CometApi} from "./api.ts";
+import {type Middleware, type MiddlewareFn, Pipeline} from "../util/pipeline";
+import type {CometRequest} from "../request";
+import type {CometResult} from "../result";
+import type {CometState} from "../state";
+import {API_NOT_FOUND, type CometApi} from "./api";
 
 let SUB_PATH_KEY = Symbol("SUB_PATH_KEY");
 

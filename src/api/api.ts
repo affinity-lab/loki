@@ -1,5 +1,5 @@
-import type {CometRequest} from "../request.ts";
-import type {CometResult} from "../result.ts";
+import type {CometRequest} from "../request";
+import type {CometResult} from "../result";
 
 class ApiNotFound{}
 export const API_NOT_FOUND = new ApiNotFound();

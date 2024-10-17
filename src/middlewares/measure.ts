@@ -1,4 +1,4 @@
-import type {CometState} from "../state.ts";
+import type {CometState} from "../state";
 
 export function measureMiddleware(label: () => string = () => Math.random().toString()) {
 	return async function (state: CometState, next: Function): Promise<Response> {

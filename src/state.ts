@@ -1,5 +1,5 @@
-import type {CometApi} from "./api/api.ts";
-import type {CometRequest} from "./request.ts";
+import type {CometApi} from "./api/api";
+import type {CometRequest} from "./request";
 
 export type CometState = {
 	env: Record<string | symbol, any>,

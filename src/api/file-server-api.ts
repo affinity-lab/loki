@@ -1,9 +1,9 @@
-import path from "path";
-import type {Middleware, MiddlewareFn} from "../util/pipeline.ts";
-import type {CometRequest} from "../request.ts";
-import {CometResult} from "../result.ts";
-import type {CometState} from "../state.ts";
-import {PrefixApi} from "./prefix-api.ts";
+import * as path from "path";
+import type {Middleware, MiddlewareFn} from "../util/pipeline";
+import type {CometRequest} from "../request";
+import {CometResult} from "../result";
+import type {CometState} from "../state";
+import {PrefixApi} from "./prefix-api";
 
 export class FileServerApi extends PrefixApi {
 

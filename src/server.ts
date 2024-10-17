@@ -1,6 +1,6 @@
-import type {CometAdapter} from "./adapter.ts";
-import {API_NOT_FOUND, type CometApi} from "./api/api.ts";
-import type {CometResult} from "./result.ts";
+import type {CometAdapter} from "./adapter";
+import {API_NOT_FOUND, type CometApi} from "./api/api";
+import type {CometResult} from "./result";
 
 export class CometServer {
 	constructor(

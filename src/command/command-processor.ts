@@ -1,7 +1,7 @@
-import {getAllMethods} from "../util/get-all-methods.ts";
-import {Pipeline} from "../util/pipeline.ts";
-import type {CometState} from "../state.ts";
-import {Cmd} from "./cmd.ts";
+import {getAllMethods} from "../util/get-all-methods";
+import {Pipeline} from "../util/pipeline";
+import type {CometState} from "../state";
+import {Cmd} from "./cmd";
 
 export class Fqn extends String {}
 export function fqn(value:TemplateStringsArray){return new Fqn(value[0]) as string}
