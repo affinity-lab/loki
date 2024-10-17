@@ -1,6 +1,6 @@
 {
 	"name": "@laborci/comet",
-	"version": "0.0.12",
+	"version": "0.0.13",
 	"module": "index.ts",
 	"main": "index.ts",
 	"type": "module",
