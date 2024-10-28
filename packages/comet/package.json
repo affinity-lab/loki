@@ -1,0 +1,36 @@
+{
+  "name": "@laborci/comet",
+  "version": "0.0.39-dev.4",
+  "description": "Utils for Comet and Storm",
+  "license": "MIT",
+  "author": {
+    "name": "Gergely Laborci",
+    "email": "gergely@laborci.hu"
+  },
+  "scripts": {
+    "build": "bun build.ts"
+  },
+  "type": "module",
+  "repository": {
+    "url": "git://github.com/laborci/comet.git"
+  },
+  "files": [
+    "dist",
+    "tsconfig.json"
+  ],
+  "devDependencies": {},
+  "peerDependencies": {
+    "typescript": "^5.6.3"
+  },
+  "dependencies": {
+    "@laborci/util": "0.0.38-dev.1",
+    "reformdata": "^0.2.2"
+  },
+  "buildMeta": {
+    "bld": "9c4114e4d33ba8e0901b0daea3e505ba",
+    "pub": "9c4114e4d33ba8e0901b0daea3e505ba"
+  },
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js"
+}

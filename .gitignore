@@ -2,3 +2,4 @@
 /.idea/
 /bun.lockb
 /index.d.ts
+/.env

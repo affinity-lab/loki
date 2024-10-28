@@ -1,0 +1,29 @@
+{
+  "name": "@laborci/util",
+  "author": {
+    "name": "Gergely Laborci",
+    "email": "gergely@laborci.hu"
+  },
+  "scripts": {
+    "build": "bun build.ts"
+  },
+  "version": "0.0.38-dev.1",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "repository": {
+    "url": "git://github.com/laborci/comet.git"
+  },
+  "files": [
+    "dist",
+    "tsconfig.json"
+  ],
+  "devDependencies": {},
+  "peerDependencies": {},
+  "dependencies": {},
+  "module": "dist/index.js",
+  "buildMeta": {
+    "bld": "2d0631f915d4ebb878929406ef426074",
+    "pub": "2d0631f915d4ebb878929406ef426074"
+  }
+}

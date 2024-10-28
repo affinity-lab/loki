@@ -1,19 +1,32 @@
 {
-	"name": "@laborci/comet",
-	"version": "0.0.13",
-	"module": "index.ts",
-	"main": "index.ts",
+	"name": "@laborci/aphrodite",
+	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "bun run build.ts"
+		"build": "bun ./etc/build.ts",
+		"pub": "bun ./etc/publish.ts",
+		"publish": "bun ./etc/publish.ts",
+		"release": "bun ./etc/publish.ts rel",
+		"rel": "bun ./etc/publish.ts rel",
+		"dev": "bun ./etc/build.ts && bun ./etc/publish.ts"
 	},
 	"repository": {
 		"url": "git://github.com/laborci/comet.git"
 	},
 	"devDependencies": {
+		"@laborci/comet": "workspace:packages/comet@dev",
+		"@laborci/util": "workspace:packages/util@dev",
+		"@laborci/storm": "workspace:packages/storm@dev",
+		"@laborci/sapphire-server": "workspace:packages/sapphire-server@dev",
 		"@types/bun": "latest",
 		"bun-plugin-dts": "^0.3.0"
 	},
 	"peerDependencies": {},
-	"dependencies": {}
+	"dependencies": {},
+	"workspaces": [
+		"packages/comet",
+		"packages/storm",
+		"packages/util",
+		"packages/sapphire-server"
+	]
 }
