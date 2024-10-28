@@ -1,18 +1,15 @@
 {
-  "name": "@laborci/comet",
-  "version": "0.0.39-dev.4",
-  "description": "Utils for Comet and Storm",
+  "name": "@affinity-lab/loki.comet",
+  "version": "0.0.2-dev.0",
+  "description": "Command router",
   "license": "MIT",
-  "author": {
-    "name": "Gergely Laborci",
-    "email": "gergely@laborci.hu"
-  },
+  "author": "Affinity Lab",
   "scripts": {
     "build": "bun build.ts"
   },
   "type": "module",
   "repository": {
-    "url": "git://github.com/laborci/comet.git"
+    "url": "git://github.com/affinity-lab/loki.git"
   },
   "files": [
     "dist",
@@ -23,12 +20,12 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@laborci/util": "0.0.38-dev.1",
+    "@affinity-lab/loki.util": "0.0.2-dev.0",
     "reformdata": "^0.2.2"
   },
   "buildMeta": {
-    "bld": "9c4114e4d33ba8e0901b0daea3e505ba",
-    "pub": "9c4114e4d33ba8e0901b0daea3e505ba"
+    "bld": "530e1b3a51068aaa0dfbab496186cbfb",
+    "pub": "530e1b3a51068aaa0dfbab496186cbfb"
   },
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

@@ -1,18 +1,15 @@
 {
-  "name": "@laborci/sapphire-server",
-  "version": "0.0.6-dev.1",
+  "name": "@affinity-lab/loki.sapphire-server",
+  "version": "0.0.2-dev.0",
   "description": "Sapphire server",
   "license": "MIT",
-  "author": {
-    "name": "Gergely Laborci",
-    "email": "gergely@laborci.hu"
-  },
+  "author": "Affinity Lab",
   "scripts": {
     "build": "bun build.ts"
   },
   "type": "module",
   "repository": {
-    "url": "git://github.com/laborci/comet.git"
+    "url": "git://github.com/affinity-lab/loki.git"
   },
   "files": [
     "dist",
@@ -23,13 +20,13 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@laborci/util": "0.0.38-dev.1",
-    "@laborci/storm": "0.0.6-dev.1",
+    "@affinity-lab/loki.util": "0.0.2-dev.0",
+    "@affinity-lab/loki.storm": "0.0.2-dev.0",
     "drizzle-orm": "0.35.3"
   },
   "buildMeta": {
-    "bld": "cec03272c11d1729c18607ba68dce45f",
-    "pub": "cec03272c11d1729c18607ba68dce45f"
+    "bld": "1b720ead448eb7bd3e39bdbc37903760",
+    "pub": "1b720ead448eb7bd3e39bdbc37903760"
   },
   "module": "dist/index.js",
   "main": "dist/index.js",

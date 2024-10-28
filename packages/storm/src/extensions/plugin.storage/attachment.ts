@@ -1,7 +1,7 @@
 import fs from "fs";
 import path from "path";
 import {type Collection} from "./collection";
-import {mimeTypeMap} from "@laborci/util";
+import {mimeTypeMap} from "@affinity-lab/loki.util";
 import type {AttachmentObject} from "./helper/types";
 
 export class Attachment<METADATA extends Record<string, any>> implements AttachmentObject {

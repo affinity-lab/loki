@@ -1,29 +1,29 @@
 {
-  "name": "@laborci/util",
-  "author": {
-    "name": "Gergely Laborci",
-    "email": "gergely@laborci.hu"
-  },
+  "name": "@affinity-lab/loki.util",
+  "author": "Affinity Lab",
+  "description": "Utils for Comet and Storm",
+  "version": "0.0.2-dev.0",
   "scripts": {
     "build": "bun build.ts"
   },
-  "version": "0.0.38-dev.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "type": "module",
   "repository": {
-    "url": "git://github.com/laborci/comet.git"
+    "url": "git://github.com/affinity-lab/loki.git"
   },
   "files": [
     "dist",
     "tsconfig.json"
   ],
-  "devDependencies": {},
+  "devDependencies": {
+    "@types/bun": "^1.1.12"
+  },
   "peerDependencies": {},
   "dependencies": {},
   "module": "dist/index.js",
   "buildMeta": {
-    "bld": "2d0631f915d4ebb878929406ef426074",
-    "pub": "2d0631f915d4ebb878929406ef426074"
+    "bld": "7e35c38ec57096874cb73b492a1fb495",
+    "pub": "7e35c38ec57096874cb73b492a1fb495"
   }
 }

@@ -1,4 +1,4 @@
-import {Cache, type NonEmptyArray} from "@laborci/util";
+import {Cache, type NonEmptyArray} from "@affinity-lab/loki.util";
 
 export class ResultCache {
 	constructor(readonly cache: Cache) {

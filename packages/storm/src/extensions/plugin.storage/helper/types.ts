@@ -1,4 +1,4 @@
-import type {FileSizeWithUnit, NumericString} from "@laborci/util";
+import type {FileSizeWithUnit, NumericString} from "@affinity-lab/loki.util";
 
 
 export type AttachmentObject = {

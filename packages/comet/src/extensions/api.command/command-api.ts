@@ -1,4 +1,4 @@
-import type {Middleware, MiddlewareFn} from "@laborci/util";
+import type {Middleware, MiddlewareFn} from "@affinity-lab/loki.util";
 import type {CometRequest, CometState} from "../../core";
 import {CometResult} from "../../core";
 import {PrefixApi} from "../api.prefix/prefix-api";

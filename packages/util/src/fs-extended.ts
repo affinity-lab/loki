@@ -1,7 +1,7 @@
 import {Buffer} from "buffer";
-import crypto from "crypto";
-import fs from "fs";
-import path from "path";
+import * as crypto from "crypto";
+import * as fs from "fs";
+import * as path from "path";
 import {mimeTypeMap} from "./fs-extended.mime-type-map";
 import type {NonEmptyArray} from "./types";
 

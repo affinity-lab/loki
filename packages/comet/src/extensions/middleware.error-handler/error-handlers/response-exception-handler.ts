@@ -1,4 +1,4 @@
-import {ResponseException} from "@laborci/util";
+import {ResponseException} from "@affinity-lab/loki.util";
 import {CometResult} from "../../../core";
 
 export function responseExceptionHandler() {

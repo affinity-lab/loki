@@ -1,4 +1,4 @@
-import {ResponseException} from "@laborci/util";
+import {ResponseException} from "@affinity-lab/loki.util";
 import type {CometMiddlewareFn, CometResult, CometState} from "../../core";
 import {type AuthState, getAuthState} from "./auth-state";
 

@@ -1,4 +1,4 @@
-import {Pipeline} from "@laborci/util";
+import {Pipeline} from "@affinity-lab/loki.util";
 import type {CometMiddlewareKind, CometRequest, CometResult, CometState} from "../../core";
 import {API_NOT_FOUND, type CometApi} from "../../core";
 

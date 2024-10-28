@@ -1,5 +1,4 @@
-import type {Cache, State} from "@laborci/util";
-import {fileExists, firstOrUndefined, getUniqueFilename, MaterializeIt, removeEmptyParentDirectories, sanitizeFilename} from "@laborci/util";
+import {fileExists, firstOrUndefined, getUniqueFilename, MaterializeIt, removeEmptyParentDirectories, sanitizeFilename, type Cache, type State} from "@affinity-lab/loki.util";
 import {and, eq, sql} from "drizzle-orm";
 import {MySqlTable} from "drizzle-orm/mysql-core";
 import type {MySql2Database} from "drizzle-orm/mysql2";

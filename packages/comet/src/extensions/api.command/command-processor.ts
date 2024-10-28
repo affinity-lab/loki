@@ -1,4 +1,4 @@
-import {getAllMethods, type Middleware, type MiddlewareFn, Pipeline} from "@laborci/util";
+import {getAllMethods, type Middleware, type MiddlewareFn, Pipeline} from "@affinity-lab/loki.util";
 import type {CometState} from "../../core";
 import {CometResult} from "../../core";
 import {Cmd} from "./cmd";

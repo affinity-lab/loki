@@ -1,5 +1,5 @@
-import {likeString} from "@laborci/storm";
-import type {MaybeArray} from "@laborci/util";
+import {likeString} from "@affinity-lab/loki.storm";
+import type {MaybeArray} from "@affinity-lab/loki.util";
 import {and, asc, desc, getTableName, or, sql, SQL, type SQLWrapper} from "drizzle-orm";
 import {type AnyMySqlSelectQueryBuilder, MySqlColumn, type MySqlJoin, type MySqlSelectWithout, type MySqlTableWithColumns} from "drizzle-orm/mysql-core";
 import {type MySql2Database} from "drizzle-orm/mysql2";

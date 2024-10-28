@@ -1,4 +1,4 @@
-import {pickFields} from "@laborci/util";
+import {pickFields} from "@affinity-lab/loki.util";
 import {CometResult} from "../../../core";
 
 export function zodErrorHandler() {

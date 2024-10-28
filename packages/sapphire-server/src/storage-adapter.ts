@@ -1,6 +1,5 @@
-import {type EntityRepositoryInterface} from "@laborci/storm";
-import {Attachment, Collection, Storage} from "@laborci/storm";
-import {TmpFile, type TmpFileFactory} from "@laborci/util";
+import {Attachment, Collection, Storage, type EntityRepositoryInterface} from "@affinity-lab/loki.storm";
+import {TmpFile, type TmpFileFactory} from "@affinity-lab/loki.util";
 import {getTableName} from "drizzle-orm";
 import {type MySqlTableWithColumns} from "drizzle-orm/mysql-core";
 import {sapphireError} from "./error";

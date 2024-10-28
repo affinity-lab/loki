@@ -1,5 +1,8 @@
 // @bun
 // src/metadata-library.ts
+function ifNotDefined(value) {
+  return new IfNotDefined(value);
+}
 var UNDEFINED = Symbol("UNDEFINED");
 
 class IfNotDefined {
@@ -7,9 +10,6 @@ class IfNotDefined {
   constructor(value) {
     this.value = value;
   }
-}
-function ifNotDefined(value) {
-  return new IfNotDefined(value);
 }
 
 class MetadataLibrary {
@@ -104,8 +104,12 @@ function toSnakeCase(input) {
   return input.replace(/([a-z])([A-Z])/g, "$1_$2").toLowerCase().replace(/-/g, "_");
 }
 // src/http-status-codes.ts
+function getHttpStatusName(code) {
+  const statusName = HttpStatusCode[code];
+  return statusName ? statusName : "Unknown Status Code";
+}
 var HttpStatusCode;
-((HttpStatusCode2) => {
+(function(HttpStatusCode2) {
   HttpStatusCode2[HttpStatusCode2["Continue"] = 100] = "Continue";
   HttpStatusCode2[HttpStatusCode2["SwitchingProtocols"] = 101] = "SwitchingProtocols";
   HttpStatusCode2[HttpStatusCode2["Processing"] = 102] = "Processing";
@@ -168,11 +172,7 @@ var HttpStatusCode;
   HttpStatusCode2[HttpStatusCode2["LoopDetected"] = 508] = "LoopDetected";
   HttpStatusCode2[HttpStatusCode2["NotExtended"] = 510] = "NotExtended";
   HttpStatusCode2[HttpStatusCode2["NetworkAuthenticationRequired"] = 511] = "NetworkAuthenticationRequired";
-})(HttpStatusCode ||= {});
-function getHttpStatusName(code) {
-  const statusName = HttpStatusCode[code];
-  return statusName ? statusName : "Unknown Status Code";
-}
+})(HttpStatusCode || (HttpStatusCode = {}));
 // src/response-exception.ts
 class ResponseException extends Error {
   message;
@@ -358,7 +358,7 @@ async function fileExists(path) {
   }
 }
 // src/fs/tmp-file.ts
-import { Buffer } from "buffer";
+import {Buffer} from "buffer";
 import crypto from "crypto";
 import fs2 from "fs";
 import path from "path";
@@ -1322,10 +1322,10 @@ class CacheWithNoCache extends Cache {
   }
 }
 // src/fs-extended.ts
-import { Buffer as Buffer2 } from "buffer";
-import crypto3 from "crypto";
-import fs4 from "fs";
-import path3 from "path";
+import {Buffer as Buffer2} from "buffer";
+import * as crypto3 from "crypto";
+import * as fs4 from "fs";
+import * as path3 from "path";
 
 // src/fs-extended.mime-type-map.ts
 var mimeTypeMap2 = {
@@ -2227,6 +2227,25 @@ class TmpFileCreator {
     return new TmpFile2(target);
   }
 }
+// src/password.ts
+import * as crypto4 from "crypto";
+async function hash(string, algorithm = "sha256", encoding = "hex") {
+  return crypto4.createHash(algorithm).update(string).digest(encoding);
+}
+
+class Password {
+  pepper;
+  algorithm;
+  encoding;
+  constructor(pepper, algorithm = "sha256", encoding = "hex") {
+    this.pepper = pepper;
+    this.algorithm = algorithm;
+    this.encoding = encoding;
+  }
+  async hash(password) {
+    return hash(password + this.pepper, this.algorithm, this.encoding);
+  }
+}
 export {
   toSnakeCase,
   toKebabCase,
@@ -2242,6 +2261,7 @@ export {
   keyMap,
   joinPath,
   ifNotDefined,
+  hash,
   getUniqueFilename,
   getHttpStatusName,
   getAllMethods,
@@ -2257,6 +2277,7 @@ export {
   ResponseException,
   ProcessPipeline,
   Pipeline,
+  Password,
   MetadataLibrary,
   MaterializeIt,
   MaterializeIfDefined,

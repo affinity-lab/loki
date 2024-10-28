@@ -1,4 +1,4 @@
-import {FileDescriptor} from "@laborci/util";
+import {FileDescriptor} from "@affinity-lab/loki.util";
 import type {EntityRepositoryInterface} from "../../core";
 import {Collection} from "../storage/collection";
 import type {CollectionOptions, ITmpFile, MetaField} from "../storage/helper/types";

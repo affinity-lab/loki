@@ -1,5 +1,5 @@
-import {type Dto, Entity, type EntityRepositoryInterface} from "@laborci/storm";
-import {type MaybeUnset} from "@laborci/comet/util";
+import {type Dto, Entity, type EntityRepositoryInterface} from "@affinity-lab/loki.storm";
+import {type MaybeUnset} from "@affinity-lab/loki.util";
 import {Column, getTableName} from "drizzle-orm";
 import {type MySqlTableWithColumns} from "drizzle-orm/mysql-core";
 import {sapphireError} from "./error";

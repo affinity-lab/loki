@@ -1,4 +1,4 @@
-import {omitFieldsIP, type State} from "@laborci/util";
+import {omitFieldsIP, type State} from "@affinity-lab/loki.util";
 import {and, eq, gt, gte, sql} from "drizzle-orm";
 import {Entity, type EntityRepositoryInterface} from "../../core";
 

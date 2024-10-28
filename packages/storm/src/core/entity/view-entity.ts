@@ -1,4 +1,4 @@
-import {MaterializeIt, type MaybeNull, omitFieldsIP, pickFieldsIP} from "@laborci/util";
+import {MaterializeIt, type MaybeNull, omitFieldsIP, pickFieldsIP} from "@affinity-lab/loki.util";
 import {entityError} from "../error";
 import {Export} from "../helper";
 import {type ViewEntityRepositoryInterface} from "./view-entity-repository-interface";

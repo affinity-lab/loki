@@ -1,4 +1,4 @@
-import type {State} from "@laborci/util";
+import type {State} from "@affinity-lab/loki.util";
 import type {EntityRepositoryInterface} from "../../core";
 import {type ResultCache} from "./result-cache-factory";
 

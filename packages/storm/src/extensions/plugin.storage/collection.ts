@@ -1,12 +1,11 @@
-import {bytes} from "@laborci/util";
-import fs from "fs";
+import {bytes, mimeTypeMap} from "@affinity-lab/loki.util";
+import * as fs from "fs";
 import {minimatch} from "minimatch";
-import Path from "path";
+import * as path from "path";
 import type {EntityRepositoryInterface, WithIdOptional} from "../../core";
 import {Attachment} from "./attachment";
 import {CollectionHandler} from "./collection-handler";
 import {storageError} from "./helper/error";
-import {mimeTypeMap} from "@laborci/util";
 import type {CollectionOptions, ITmpFile, MetaField, Rules} from "./helper/types";
 import type {Storage} from "./storage";
 
@@ -87,8 +86,8 @@ export abstract class Collection<METADATA extends Record<string, any> = {}> {
 	 */
 	async prepare(collectionHandler: CollectionHandler<METADATA>, file: ITmpFile) {
 		let metadata: Record<string, any>;
-		const ext = Path.extname(file.filename);
-		const filename = Path.basename(file.filename);
+		const ext = path.extname(file.filename);
+		const filename = path.basename(file.filename);
 		const stat = await fs.promises.stat(file.file);
 		let id = collectionHandler.id;
 

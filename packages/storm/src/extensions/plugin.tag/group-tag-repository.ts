@@ -1,4 +1,4 @@
-import {MaterializeIt, type State, type T_Class} from "@laborci/util";
+import {MaterializeIt, type State, type T_Class} from "@affinity-lab/loki.util";
 import {and, eq, not, sql} from "drizzle-orm";
 import {type MySqlTable} from "drizzle-orm/mysql-core";
 import {type MySql2Database} from "drizzle-orm/mysql2";

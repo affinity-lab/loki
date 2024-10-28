@@ -1,5 +1,5 @@
 {
-	"name": "@laborci/aphrodite",
+	"name": "@affinity-lab/loki",
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
@@ -11,13 +11,13 @@
 		"dev": "bun ./etc/build.ts && bun ./etc/publish.ts"
 	},
 	"repository": {
-		"url": "git://github.com/laborci/comet.git"
+		"url": "git://github.com/affinity-lab/loki.git"
 	},
 	"devDependencies": {
-		"@laborci/comet": "workspace:packages/comet@dev",
-		"@laborci/util": "workspace:packages/util@dev",
-		"@laborci/storm": "workspace:packages/storm@dev",
-		"@laborci/sapphire-server": "workspace:packages/sapphire-server@dev",
+		"@affinity-lab/loki.comet": "workspace:packages/comet",
+		"@affinity-lab/loki.util": "workspace:packages/util",
+		"@affinity-lab/loki.storm": "workspace:packages/storm",
+		"@affinity-lab/loki.sapphire-server": "workspace:packages/sapphire-server",
 		"@types/bun": "latest",
 		"bun-plugin-dts": "^0.3.0"
 	},

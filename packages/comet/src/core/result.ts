@@ -1,4 +1,4 @@
-import {HttpStatusCode} from "@laborci/util";
+import {HttpStatusCode} from "@affinity-lab/loki.util";
 
 export class CometResult {
 	#headers: Array<[string, string]> = [];

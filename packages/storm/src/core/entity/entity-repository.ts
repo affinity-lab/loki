@@ -1,5 +1,4 @@
-import type {MaybePromise, T_Class} from "@laborci/util";
-import {omitFieldsIP, pickFieldsIP, ProcessPipeline, type State} from "@laborci/util";
+import {omitFieldsIP, pickFieldsIP, ProcessPipeline, type State, type MaybePromise, type T_Class} from "@affinity-lab/loki.util";
 import {sql} from "drizzle-orm";
 import {type MySqlTableWithColumns} from "drizzle-orm/mysql-core";
 import type {MySql2Database, MySqlRawQueryResult} from "drizzle-orm/mysql2";

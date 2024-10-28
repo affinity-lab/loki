@@ -1,4 +1,4 @@
-import { err, errorGroup} from "@laborci/util";
+import { err, errorGroup} from "@affinity-lab/loki.util";
 
 
 export const sapphireError = {

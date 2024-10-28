@@ -1,6 +1,6 @@
-import type {Dto} from "@laborci/storm";
-import {type MaybeUnset} from "@laborci/util";
-import {Cmd} from "@laborci/comet";
+import type {Dto} from "@affinity-lab/loki.storm";
+import {type MaybeUnset} from "@affinity-lab/loki.util";
+import {Cmd} from "@affinity-lab/loki.comet";
 import {sapphireError} from "./error";
 import type {ItemAdapter} from "./item-adapter";
 import type {ListAdapter} from "./list-adapter";
