@@ -1,4 +1,4 @@
-import {type MaybeUndefined, type MaybeUnset, ProcessPipeline, type T_Class} from "@affinity-lab/loki.util";
+import {type MaybeUndefined, type MaybeUnset, ProcessPipeline, type T_Class} from "@nano-forge/util";
 import {MySqlTable, MySqlView} from "drizzle-orm/mysql-core";
 import type {MySql2Database} from "drizzle-orm/mysql2";
 import type {ViewDto} from "../types";

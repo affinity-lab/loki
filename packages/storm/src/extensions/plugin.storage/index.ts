@@ -6,3 +6,4 @@ export * from "./helper/error";
 export * from "./helper/schema-helpers";
 export * from "./helper/storage-plugin";
 export * from "./helper/types";
+export * from "./image-collection";

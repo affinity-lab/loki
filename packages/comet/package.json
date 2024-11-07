@@ -1,33 +1,32 @@
 {
-  "name": "@affinity-lab/loki.comet",
-  "version": "0.0.2-dev.0",
-  "description": "Command router",
+  "name": "@nano-forge/comet",
+  "version": "0.0.2-dev.1",
   "license": "MIT",
-  "author": "Affinity Lab",
+  "author": "Affinity Works",
   "scripts": {
-    "build": "bun build.ts"
+    "build": "bun ../../scripts/package-builder.ts"
   },
   "type": "module",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.js",
   "repository": {
-    "url": "git://github.com/affinity-lab/loki.git"
+    "url": "git://github.com/nano-forge/packages.git"
   },
   "files": [
-    "dist",
-    "tsconfig.json"
+    "index.js",
+    "index.d.ts"
   ],
   "devDependencies": {},
   "peerDependencies": {
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@affinity-lab/loki.util": "0.0.2-dev.0",
+    "@nano-forge/util": "0.0.2-dev.3",
     "reformdata": "^0.2.2"
   },
   "buildMeta": {
-    "bld": "530e1b3a51068aaa0dfbab496186cbfb",
-    "pub": "530e1b3a51068aaa0dfbab496186cbfb"
-  },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.js"
+    "bld": "bbc34cb303b3f76d3c8ce92f2f707102",
+    "pub": "3303de133a27e2c126dd05ee44c7f48e"
+  }
 }

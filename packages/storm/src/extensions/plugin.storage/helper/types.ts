@@ -1,4 +1,4 @@
-import type {FileSizeWithUnit, NumericString} from "@affinity-lab/loki.util";
+import type {FileSizeWithUnit, NumericString} from "@nano-forge/util";
 
 
 export type AttachmentObject = {
@@ -40,5 +40,3 @@ export type Rules = {
 	mime: undefined | Array<string>
 	ext: undefined | Array<string>
 }
-
-export type MetaField = { label?: string } & ({ type: "string" } | { type: "enum", options: Array<string> });

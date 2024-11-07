@@ -1,4 +1,4 @@
-import {type ExcludeFunctions, MaterializeIt} from "@affinity-lab/loki.util";
+import {type ExcludeFunctions, MaterializeIt} from "@nano-forge/util";
 import {Import} from "../helper";
 import {type EntityRepositoryInterface} from "./entity-repository-interface";
 import {ViewEntity} from "./view-entity";

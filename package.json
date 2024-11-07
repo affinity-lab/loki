@@ -3,21 +3,26 @@
 	"version": "0.0.0",
 	"type": "module",
 	"scripts": {
-		"build": "bun ./etc/build.ts",
-		"pub": "bun ./etc/publish.ts",
-		"publish": "bun ./etc/publish.ts",
-		"release": "bun ./etc/publish.ts rel",
-		"rel": "bun ./etc/publish.ts rel",
-		"dev": "bun ./etc/build.ts && bun ./etc/publish.ts"
+		"build": "bun ./scripts/build.ts",
+		"pub": "bun ./scripts/publish.ts",
+		"publish": "bun ./scripts/publish.ts",
+		"release": "bun ./scripts/publish.ts rel",
+		"rel": "bun ./scripts/publish.ts rel",
+		"dev": "bun ./scripts/build.ts && bun ./scripts/publish.ts"
 	},
 	"repository": {
 		"url": "git://github.com/affinity-lab/loki.git"
 	},
 	"devDependencies": {
-		"@affinity-lab/loki.comet": "workspace:packages/comet",
-		"@affinity-lab/loki.util": "workspace:packages/util",
-		"@affinity-lab/loki.storm": "workspace:packages/storm",
-		"@affinity-lab/loki.sapphire-server": "workspace:packages/sapphire-server",
+		"@nano-forge/comet@dev": "workspace:packages/comet",
+		"@nano-forge/util@dev": "workspace:packages/util",
+		"@nano-forge/util.oss@dev": "workspace:packages/util.oss",
+		"@nano-forge/util.oss.img-sharp@dev": "workspace:packages/util.oss.img-sharp",
+		"@nano-forge/util.oss.cache-redis@dev": "workspace:packages/util.oss.cache-redis",
+		"@nano-forge/util.oss.cache-nodecache@dev": "workspace:packages/util.oss.cache-nodecache",
+		"@nano-forge/util.oss.cache-memcached@dev": "workspace:packages/util.oss.cache-memcached",
+		"@nano-forge/storm@dev": "workspace:packages/storm",
+		"@nano-forge/sapphire-server@dev": "workspace:packages/sapphire-server",
 		"@types/bun": "latest",
 		"bun-plugin-dts": "^0.3.0"
 	},
@@ -27,6 +32,11 @@
 		"packages/comet",
 		"packages/storm",
 		"packages/util",
+		"packages/util.oss",
+		"packages/util.oss.img-sharp",
+		"packages/util.oss.cache-redis",
+		"packages/util.oss.cache-nodecache",
+		"packages/util.oss.cache-memcached",
 		"packages/sapphire-server"
 	]
 }

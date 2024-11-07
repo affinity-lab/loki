@@ -1,4 +1,4 @@
-import {Pipeline} from "@affinity-lab/loki.util";
+import {Pipeline} from "@nano-forge/util";
 import type {CometMiddlewareKind, CometRequest, CometResult, CometState} from "../../core";
 import {API_NOT_FOUND, type CometApi} from "../../core";
 

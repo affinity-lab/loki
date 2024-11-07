@@ -1,4 +1,4 @@
-import type {Middleware, MiddlewareFn} from "@affinity-lab/loki.util";
+import type {Middleware, MiddlewareFn} from "@nano-forge/util";
 import type {CometResult} from "./result";
 import type {CometState} from "./state";
 

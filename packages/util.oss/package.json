@@ -1,0 +1,31 @@
+{
+  "name": "@nano-forge/util.oss",
+  "author": "Affinity Works",
+  "scripts": {
+    "build": "bun ../../scripts/package-builder.ts"
+  },
+  "version": "0.0.38-dev.2",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.js",
+  "type": "module",
+  "repository": {
+    "url": "git://github.com/nano-forge/packages.git"
+  },
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "devDependencies": {
+    "@types/jsonwebtoken": "^9.0.4"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@nano-forge/util": "0.0.2-dev.3",
+    "jsonwebtoken": "^9.0.2"
+  },
+  "buildMeta": {
+    "bld": "9a69f73d218a76348a2da4437187b4cb",
+    "pub": "00896ac9fff11f45c3e29c02b3caad85"
+  }
+}

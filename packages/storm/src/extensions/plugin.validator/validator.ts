@@ -1,4 +1,4 @@
-import type {State} from "@affinity-lab/loki.util";
+import type {State} from "@nano-forge/util";
 import type {EntityRepositoryInterface} from "../../core";
 
 type ZodLike = {

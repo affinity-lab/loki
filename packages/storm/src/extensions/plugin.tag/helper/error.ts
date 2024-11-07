@@ -1,4 +1,4 @@
-import {err, errorGroup} from "@affinity-lab/loki.util";
+import {err, errorGroup} from "@nano-forge/util";
 
 export const tagError = {
 	itemNotFound: (repository: string) => err("item not found!", {repository}, 404),

@@ -1,4 +1,4 @@
-import {ResponseException} from "@affinity-lab/loki.util";
+import {ResponseException} from "@nano-forge/util";
 import type {CometMiddlewareFn, CometResult, CometState} from "../../core";
 
 type ZodLike = {

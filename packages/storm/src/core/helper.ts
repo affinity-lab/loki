@@ -1,4 +1,4 @@
-import {MetadataLibrary, type State} from "@affinity-lab/loki.util";
+import {MetadataLibrary, type State} from "@nano-forge/util";
 import {eq, Placeholder, sql} from "drizzle-orm";
 import {int, MySqlColumn} from "drizzle-orm/mysql-core";
 import type {MySqlSelectWithout} from "drizzle-orm/mysql-core/query-builders/select.types";

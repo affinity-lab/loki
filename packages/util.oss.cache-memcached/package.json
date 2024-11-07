@@ -1,0 +1,32 @@
+{
+  "name": "@nano-forge/util.oss.cache-memcached",
+  "author": "Affinity Works",
+  "version": "0.0.2-dev.3",
+  "scripts": {
+    "build": "bun ../../scripts/package-builder.ts"
+  },
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.js",
+  "type": "module",
+  "repository": {
+    "url": "git://github.com/nano-forge/packages.git"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "devDependencies": {
+    "@types/bun": "^1.1.12",
+    "@types/memcached": "^2.2.2"
+  },
+  "peerDependencies": {},
+  "dependencies": {
+    "@nano-forge/util.oss": "0.0.38-dev.2",
+    "memcached": "^2.2.2"
+  },
+  "buildMeta": {
+    "bld": "0fbec22b8a86fd4b9c1d9e8e017cac14",
+    "pub": "aa6e05a0d1324dc407e69632796540fb"
+  }
+}

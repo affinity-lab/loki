@@ -1,6 +1,5 @@
-import type {Middleware, MiddlewareFn} from "@affinity-lab/loki.util";
-import type {CometRequest, CometState} from "../../core";
-import {CometResult} from "../../core";
+import type {Middleware, MiddlewareFn} from "@nano-forge/util";
+import {type CometRequest, CometResult, type CometState} from "../../core";
 import {PrefixApi} from "../api.prefix/prefix-api";
 import {processCommands} from "./command-processor";
 

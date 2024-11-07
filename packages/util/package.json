@@ -1,29 +1,28 @@
 {
-  "name": "@affinity-lab/loki.util",
-  "author": "Affinity Lab",
-  "description": "Utils for Comet and Storm",
-  "version": "0.0.2-dev.0",
+  "name": "@nano-forge/util",
+  "author": "Affinity Works",
+  "version": "0.0.2-dev.3",
   "scripts": {
-    "build": "bun build.ts"
+    "build": "bun ../../scripts/package-builder.ts"
   },
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "module": "./index.js",
   "type": "module",
   "repository": {
-    "url": "git://github.com/affinity-lab/loki.git"
+    "url": "git://github.com/nano-forge/packages.git"
   },
   "files": [
-    "dist",
-    "tsconfig.json"
+    "index.js",
+    "index.d.ts"
   ],
   "devDependencies": {
     "@types/bun": "^1.1.12"
   },
   "peerDependencies": {},
   "dependencies": {},
-  "module": "dist/index.js",
   "buildMeta": {
-    "bld": "7e35c38ec57096874cb73b492a1fb495",
-    "pub": "7e35c38ec57096874cb73b492a1fb495"
+    "bld": "aa6e05a0d1324dc407e69632796540fb",
+    "pub": "aa6e05a0d1324dc407e69632796540fb"
   }
 }

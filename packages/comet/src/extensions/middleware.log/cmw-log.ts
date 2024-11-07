@@ -1,4 +1,4 @@
-import {getHttpStatusName} from "@affinity-lab/loki.util";
+import {getHttpStatusName} from "@nano-forge/util";
 import type {CometMiddlewareFn, CometResult, CometState} from "../../core";
 
 function requestLog(state: CometState) { console.log(`${state.method} ${state.url} ${state.contentType}`);}

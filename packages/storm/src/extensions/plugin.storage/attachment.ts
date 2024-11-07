@@ -1,21 +1,21 @@
 import fs from "fs";
 import path from "path";
 import {type Collection} from "./collection";
-import {mimeTypeMap} from "@affinity-lab/loki.util";
+import {fse} from "@nano-forge/util.oss";
 import type {AttachmentObject} from "./helper/types";
 
 export class Attachment<METADATA extends Record<string, any>> implements AttachmentObject {
 
-	#collection: Collection<METADATA>;
-	#entityId: number;
-	#name: string;
-	#id: string;
-	#size: number;
-	#metadata: METADATA;
+	readonly #collection: Collection<METADATA>;
+	readonly #entityId: number;
+	readonly #name: string;
+	readonly #id: string;
+	readonly #size: number;
+	readonly #metadata: METADATA;
 	/**
 	 * The metadata of the attachment
 	 */
-	public metadata: METADATA;
+	get metadata(): METADATA {return this.#metadata;}
 	/**
 	 * The file size of the attachment
 	 */
@@ -51,7 +51,7 @@ export class Attachment<METADATA extends Record<string, any>> implements Attachm
 	async dataUrl(): Promise<string> {
 		let filePath = path.join(this.path, this.name);
 		let buffer = await fs.promises.readFile(filePath);
-		return "data:" + mimeTypeMap[path.extname(this.name)] + ';base64,' + buffer.toString('base64');
+		return "data:" + fse.mimeType.lookup(this.name) + ';base64,' + buffer.toString('base64');
 	}
 
 	constructor(attachmentObject: AttachmentObject, collection: Collection<METADATA>, entityId: number) {
@@ -61,17 +61,6 @@ export class Attachment<METADATA extends Record<string, any>> implements Attachm
 		this.#id = attachmentObject.id;
 		this.#size = attachmentObject.size;
 		this.#metadata = attachmentObject.metadata as METADATA;
-		this.metadata = new Proxy<METADATA>(this.#metadata, {
-			get: (target, prop) => target[prop.toString()],
-			set: (target, prop, value) => {
-				let p = prop.toString() as keyof METADATA;
-				if (collection.writableMetaFields.hasOwnProperty(p)) {
-					target[p] = value;
-					return true;
-				}
-				return false;
-			}
-		})
 	}
 
 	toJSON() {

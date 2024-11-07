@@ -1,34 +1,34 @@
 {
-  "name": "@affinity-lab/loki.storm",
-  "version": "0.0.2-dev.0",
-  "description": "Drizzle based ORM",
+  "name": "@nano-forge/storm",
+  "version": "0.0.2-dev.1",
   "license": "MIT",
-  "author": "Affinity Lab",
-  "scripts": {
-    "build": "bun build.ts"
-  },
+  "author": "Affinity Works",
   "type": "module",
+  "module": "./index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "bun ../../scripts/package-builder.ts"
+  },
   "repository": {
-    "url": "git://github.com/affinity-lab/loki.git"
+    "url": "git://github.com/nano-forge/packages.git"
   },
   "files": [
-    "dist",
-    "tsconfig.json"
+    "index.d.ts",
+    "index.ts"
   ],
   "devDependencies": {},
   "peerDependencies": {
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@affinity-lab/loki.util": "0.0.2-dev.0",
+    "@nano-forge/util": "0.0.2-dev.3",
+    "@nano-forge/util.oss": "0.0.38-dev.2",
     "drizzle-orm": "^0.35.3",
     "minimatch": "^10.0.1"
   },
   "buildMeta": {
-    "bld": "f19c976a5ecd460408f7706e1e018f8e",
-    "pub": "f19c976a5ecd460408f7706e1e018f8e"
-  },
-  "module": "dist/index.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+    "bld": "56a408c8db3e7da85f34b15212bbfe40",
+    "pub": "158320b60e5090c3cd041c19a89a2644"
+  }
 }

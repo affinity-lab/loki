@@ -1,4 +1,5 @@
-import {Cache, type NonEmptyArray} from "@affinity-lab/loki.util";
+import {type NonEmptyArray} from "@nano-forge/util";
+import {type Cache} from "@nano-forge/util.oss";
 
 export class ResultCache {
 	constructor(readonly cache: Cache) {

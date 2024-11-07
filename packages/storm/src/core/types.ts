@@ -1,4 +1,4 @@
-import type {MaybeNull} from "@affinity-lab/loki.util";
+import type {MaybeNull} from "@nano-forge/util";
 import type {InferSelectModel} from "drizzle-orm";
 import type {MySqlTable, MySqlView} from "drizzle-orm/mysql-core";
 

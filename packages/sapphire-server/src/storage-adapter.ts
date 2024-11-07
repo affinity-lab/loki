@@ -1,5 +1,6 @@
-import {Attachment, Collection, Storage, type EntityRepositoryInterface} from "@affinity-lab/loki.storm";
-import {TmpFile, type TmpFileFactory} from "@affinity-lab/loki.util";
+import {Attachment, Collection, type EntityRepositoryInterface, Storage} from "@nano-forge/storm";
+import {type TmpFile, type TmpFileCreator} from "@nano-forge/util.oss";
+
 import {getTableName} from "drizzle-orm";
 import {type MySqlTableWithColumns} from "drizzle-orm/mysql-core";
 import {sapphireError} from "./error";
@@ -11,7 +12,7 @@ export class StorageAdapter<SCHEMA extends MySqlTableWithColumns<any>> {
 	constructor(public schema: SCHEMA,
 		protected repository: EntityRepositoryInterface,
 		protected storage: Storage,
-		readonly tmpFileFactory: TmpFileFactory,
+		readonly tmpFileFactory: TmpFileCreator,
 		protected allowedCollections?: string[]
 	) {
 		this.type = getTableName(this.schema);
@@ -37,7 +38,6 @@ export class StorageAdapter<SCHEMA extends MySqlTableWithColumns<any>> {
 							id,
 							collection: collection.name,
 							files,
-							publicMetaFields: Object.entries(collection.writableMetaFields).map((obj) => {return {name: obj[0], ...obj[1]}}),
 							rules: collection.rules,
 						});
 					}
@@ -90,7 +90,7 @@ export class StorageAdapter<SCHEMA extends MySqlTableWithColumns<any>> {
 		if (!collection) throw sapphireError.collectionNotExist(collectionName);
 		let file = await this.findFile(id, collectionName, fileName);
 		if (newMetaData) {
-			Object.keys(collection.writableMetaFields).forEach(key => {if (newMetaData[key]) file.metadata[key] = newMetaData[key]})
+			Object.keys(newMetaData).forEach(key => file.metadata[key] = newMetaData[key])
 			await file.saveMetaData();
 		}
 		if (newName && newName.trim() !== fileName.trim()) await file.rename(newName);

@@ -1,4 +1,4 @@
-import { err, errorGroup} from "@affinity-lab/loki.util";
+import { err, errorGroup} from "@nano-forge/util";
 
 
 export const sapphireError = {

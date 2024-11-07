@@ -1,4 +1,4 @@
-import {MaterializeIt, type MaybeArray, type State, type T_Class} from "@affinity-lab/loki.util";
+import {MaterializeIt, type MaybeArray, type State, type T_Class} from "@nano-forge/util";
 import {and, not, sql} from "drizzle-orm";
 import {MySqlTable} from "drizzle-orm/mysql-core";
 import {type Dto, Entity, EntityRepository, type EntityRepositoryInterface, Export, Import, prevDto, stmt} from "../../core";

@@ -1,4 +1,4 @@
-import {ifNotDefined, type MetaArg, MetadataLibrary, toKebabCase} from "@affinity-lab/loki.util";
+import {ifNotDefined, type MetaArg, MetadataLibrary, toKebabCase} from "@nano-forge/util";
 import type {CometMiddlewareKind} from "../../core";
 
 let metal = new MetadataLibrary();

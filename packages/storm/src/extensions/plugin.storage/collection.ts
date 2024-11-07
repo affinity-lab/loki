@@ -1,4 +1,5 @@
-import {bytes, mimeTypeMap} from "@affinity-lab/loki.util";
+import {bytes} from "@nano-forge/util";
+import {fse} from "@nano-forge/util.oss";
 import * as fs from "fs";
 import {minimatch} from "minimatch";
 import * as path from "path";
@@ -6,7 +7,7 @@ import type {EntityRepositoryInterface, WithIdOptional} from "../../core";
 import {Attachment} from "./attachment";
 import {CollectionHandler} from "./collection-handler";
 import {storageError} from "./helper/error";
-import type {CollectionOptions, ITmpFile, MetaField, Rules} from "./helper/types";
+import type {CollectionOptions, ITmpFile, Rules} from "./helper/types";
 import type {Storage} from "./storage";
 
 export abstract class Collection<METADATA extends Record<string, any> = {}> {
@@ -23,10 +24,6 @@ export abstract class Collection<METADATA extends Record<string, any> = {}> {
 
 	getPath(entityId: number) {return this.storage.getPath(this.name, entityId);}
 
-	/**
-	 * The writable metadata fields
-	 */
-	public readonly writableMetaFields: Record<string, MetaField> = {}
 	/**
 	 * The rules for the collection
 	 */
@@ -58,8 +55,8 @@ export abstract class Collection<METADATA extends Record<string, any> = {}> {
 		if (this.rules.mime !== undefined) {
 			if (!Array.isArray(this.rules.ext)) this.rules.ext = [];
 			for (const mime of this.rules.mime) {
-				for (const ext in mimeTypeMap) {
-					if (minimatch(mimeTypeMap[ext], mime)) this.rules.ext.push(ext);
+				for (const ext in fse.mimeType.map) {
+					if (minimatch(fse.mimeType.map[ext], mime)) this.rules.ext.push(ext);
 				}
 			}
 			if (rules.ext?.length === 0) rules.ext = undefined;

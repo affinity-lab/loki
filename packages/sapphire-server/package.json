@@ -1,34 +1,33 @@
 {
-  "name": "@affinity-lab/loki.sapphire-server",
-  "version": "0.0.2-dev.0",
-  "description": "Sapphire server",
+  "name": "@nano-forge/sapphire-server",
+  "version": "0.0.2-dev.1",
   "license": "MIT",
-  "author": "Affinity Lab",
-  "scripts": {
-    "build": "bun build.ts"
-  },
+  "author": "Affinity Works",
   "type": "module",
+  "module": "./index.js",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "bun ../../scripts/package-builder.ts"
+  },
   "repository": {
-    "url": "git://github.com/affinity-lab/loki.git"
+    "url": "git://github.com/nano-forge/packages.git"
   },
   "files": [
-    "dist",
-    "tsconfig.json"
+    "index.d.ts",
+    "index.ts"
   ],
   "devDependencies": {},
   "peerDependencies": {
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "@affinity-lab/loki.util": "0.0.2-dev.0",
-    "@affinity-lab/loki.storm": "0.0.2-dev.0",
+    "@nano-forge/util": "0.0.2-dev.3",
+    "@nano-forge/storm": "0.0.2-dev.1",
     "drizzle-orm": "0.35.3"
   },
   "buildMeta": {
-    "bld": "1b720ead448eb7bd3e39bdbc37903760",
-    "pub": "1b720ead448eb7bd3e39bdbc37903760"
-  },
-  "module": "dist/index.js",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts"
+    "bld": "80a665f9ba094e54d0d67f20b7b679c6",
+    "pub": "c926396252846655b34dc21070acd221"
+  }
 }
